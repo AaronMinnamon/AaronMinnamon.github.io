@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'reset';
+
+body{
+  // font-family:'Roboto Mono',monospace,'Helvetica', 'Arial', 'Sans-Serif';
+}
+
+html, body, md-sidenav-container, .my-content {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}

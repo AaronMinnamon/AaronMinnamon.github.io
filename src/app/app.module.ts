@@ -1,19 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MdButtonModule, MdCheckboxModule} from '@angular/material';
+import {MdListModule, MdSidenavModule, MdButtonModule, MdCheckboxModule} from '@angular/material';
+import { ParticlesModule } from 'angular-particle';
 
 import { AppComponent } from './app.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { ParticlesComponent } from './particles/particles.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SidenavComponent,
+    ParticlesComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    MdListModule,
+    MdSidenavModule,
     MdButtonModule,
-    MdCheckboxModule
+    MdCheckboxModule,
+    ParticlesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
