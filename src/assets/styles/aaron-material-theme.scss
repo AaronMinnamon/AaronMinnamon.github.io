@@ -9,7 +9,7 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue.
-$light-primary: mat-palette($mat-blue-grey,200,400,900);
+$light-primary: mat-palette($mat-blue-grey,800,300,900);
 $light-accent:  mat-palette($mat-yellow, A100, A200, A200);
 
 // The warn palette is optional (defaults to red).
@@ -35,4 +35,10 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 // `.unicorn-dark-theme` will be affected by this alternate dark theme instead of the default theme.
 .dark-theme {
   @include angular-material-theme($dark-theme);
+  .my-content{
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
 }

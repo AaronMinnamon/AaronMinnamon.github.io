@@ -1,1 +1,1 @@
-<app-sidenav [class]="themeClass"></app-sidenav>
+<app-sidenav (onSliderChange)="onSliderChange($event)" [ngClass]="{'dark-theme': isSliderChecked}"></app-sidenav>

@@ -6,11 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  themeClass: string;
-  title = 'app';
+  isSliderChecked = false;
+
+  onSliderChange(isChecked){
+    this.isSliderChecked = isChecked;
+  }
 
   ngOnInit(): void {
-    // on init set the theme class
-    this.themeClass = '';
   }
 }

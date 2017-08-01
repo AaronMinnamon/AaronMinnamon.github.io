@@ -1,13 +1,15 @@
 <md-sidenav-container>
   <md-sidenav color="accent" mode="side" opened="true">
+    <md-slide-toggle color="accent" (change)=sliderChanged($event)></md-slide-toggle>
     <md-nav-list>
-       <a md-list-item href="#"><i class="material-icons icon-centered">home</i></a>
-       <a md-list-item href="#"><i class="material-icons icon-centered">code</i></a>
-       <a md-list-item href="#"><i class="material-icons icon-centered">info_outline</i></a>
-       <a md-list-item href="#"><i class="material-icons icon-centered">email</i></a>
+       <a md-list-item [routerLink]="['/home']"><i mdTooltip="Home" mdTooltipPosition="after" class="material-icons icon-centered">home</i></a>
+       <a md-list-item [routerLink]="['/projects']"><i mdTooltip="Projects" mdTooltipPosition="after" class="material-icons icon-centered">code</i></a>
+       <a md-list-item href="#"><i mdTooltip="About" mdTooltipPosition="after" class="material-icons icon-centered">info_outline</i></a>
+       <a md-list-item href="#"><i mdTooltip="Contact" mdTooltipPosition="after" class="material-icons icon-centered">email</i></a>
     </md-nav-list>
   </md-sidenav>
   <div class="my-content">
+    <router-outlet></router-outlet>
     <app-particles></app-particles>
   </div>
 </md-sidenav-container>
