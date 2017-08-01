@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ParticlesComponent } from '../particles/particles.component';
 
 @Component({
   selector: 'app-sidenav',

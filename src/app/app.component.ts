@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { SidenavComponent } from './sidenav/sidenav.component';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +6,11 @@ import { SidenavComponent } from './sidenav/sidenav.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  themeClass: string;
   title = 'app';
+
+  ngOnInit(): void {
+    // on init set the theme class
+    this.themeClass = '';
+  }
 }

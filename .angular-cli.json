@@ -19,8 +19,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "assets/styles/styles.scss",
         "assets/styles/aaron-material-theme.scss",
+        "assets/styles/styles.scss",
         "assets/styles/custom-fonts.scss"
       ],
       "scripts": [],
