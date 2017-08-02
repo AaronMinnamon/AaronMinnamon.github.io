@@ -1,9 +1,15 @@
 import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
+import {trigger, animate, style, group, animateChild, query, stagger, transition} from '@angular/animations';
 
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
-  styleUrls: ['./sidenav.component.scss']
+  styleUrls: ['./sidenav.component.scss'],
+  animations: [
+      trigger('routerAnimations', [
+
+      ])
+    ]
 })
 export class SidenavComponent implements OnInit {
 
@@ -18,6 +24,11 @@ export class SidenavComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  prepareRouteTransition(outlet) {
+    const animation = outlet.activatedRouteData['animation'] || {};
+    return animation['value'] || null;
   }
 
 }

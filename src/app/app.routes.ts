@@ -7,6 +7,8 @@ import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 // Route Configuration
 export const routes: Routes = [
@@ -15,8 +17,10 @@ export const routes: Routes = [
     redirectTo: '/home',
     pathMatch: 'full'
   },
-  { path: 'home', component: HomeComponent },
-  { path: 'projects', component: ProjectsComponent }
+  { path: 'home', component: HomeComponent, data: { animation: { value: 'home', } } },
+  { path: 'projects', component: ProjectsComponent, data: { animation: { value: 'projects', } } },
+  { path: 'about', component: AboutComponent, data: { animation: { value: 'about', } } },
+  { path: 'contact', component: ContactComponent, data: { animation: { value: 'contact', } } }
 ];
 
 // Deprecated provide

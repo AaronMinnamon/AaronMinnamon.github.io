@@ -27,10 +27,18 @@ html, body, md-sidenav-container, .my-content {
 .material-icons.md-48 { font-size: 48px; }
 .mat-sidenav{
  background-color: mat-color($primary,darker);
- width: 60px;
+ width: 100px;
+ max-width: 100px;
+ min-width: 100px !important;
  box-shadow: 3px 0 6px rgba(0,0,0,.24);
  .mat-list-item{
    color: white;
+ }
+ .mat-slide-toggle-bar{
+   background-color: rgba(255, 255, 255, 0.38);
+ }
+ .mat-slide-toggle{
+   margin: 30px;
  }
  i.icon-centered{
    width: 100%;

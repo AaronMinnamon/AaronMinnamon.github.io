@@ -11,6 +11,8 @@ import { ParticlesComponent } from './particles/particles.component';
 import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { routing } from './app.routes';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { routing } from './app.routes';
     SidenavComponent,
     ParticlesComponent,
     HomeComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
