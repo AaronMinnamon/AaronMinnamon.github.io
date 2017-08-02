@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import 'hammerjs';
-import { MdTooltipModule, MdListModule, MdSidenavModule, MdButtonModule, MdCheckboxModule, MdSlideToggleModule} from '@angular/material';
+import { MdGridListModule, MdTooltipModule, MdListModule, MdSidenavModule, MdButtonModule, MdCheckboxModule, MdSlideToggleModule} from '@angular/material';
 import { ParticlesModule } from 'angular-particle';
 
 import { AppComponent } from './app.component';
@@ -27,6 +27,7 @@ import { ContactComponent } from './contact/contact.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    MdGridListModule,
     MdTooltipModule,
     MdListModule,
     MdSidenavModule,

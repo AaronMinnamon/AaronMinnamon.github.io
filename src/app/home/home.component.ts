@@ -33,7 +33,7 @@ import { Component, OnInit, HostBinding } from '@angular/core';
       ]),
       transition(':leave', [
         style({ position: 'absolute', top: 0, left: 0, right: 0 }),
-        animate('500ms cubic-bezier(.35,0,.25,1)', style({ opacity: 0, transform: 'translateY(-100px)' }))
+        animate('500ms cubic-bezier(.35,0,.25,1)', style({ opacity: 0, transform: 'translateY(100px)' }))
       ])
     ])
   ]
