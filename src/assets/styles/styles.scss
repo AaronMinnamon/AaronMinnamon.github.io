@@ -50,6 +50,31 @@ html, body, md-sidenav-container, .my-content {
   background: -webkit-linear-gradient(to right, #E2E2E2, #e2f1f8);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #E2E2E2, #e2f1f8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-.hide{
-  display: none;
+.content-container{
+  position: relative;
+  z-index: 3;
+}
+.resume-grid{
+  .mat-grid-tile .mat-figure{
+    padding: 30px;
+    box-sizing: border-box;
+  }
+}
+.resume-card{
+  .mat-card-header{
+    .mat-card-header-text{
+      margin: 0;
+    }
+    .mat-card-title{
+      font-size: 32px;
+    }
+  }
+  .mat-card-content{
+    .mat-card-title{
+      font-size: 20px;
+    }
+    p{
+      padding-bottom: 20px;
+    }
+  }
 }
