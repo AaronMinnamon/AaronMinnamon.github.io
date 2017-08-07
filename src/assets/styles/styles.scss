@@ -31,6 +31,7 @@ html, body, md-sidenav-container, .my-content {
  max-width: 100px;
  min-width: 100px !important;
  box-shadow: 3px 0 6px rgba(0,0,0,.24);
+ overflow: hidden;
  .mat-list-item{
    color: white;
  }
@@ -49,32 +50,66 @@ html, body, md-sidenav-container, .my-content {
   background: #C9D6FF;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #E2E2E2, #e2f1f8);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #E2E2E2, #e2f1f8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  overflow: auto;
 }
 .content-container{
   position: relative;
   z-index: 3;
 }
-.resume-grid{
-  .mat-grid-tile .mat-figure{
-    padding: 30px;
-    box-sizing: border-box;
+.project-card{
+  text-align: center;
+  h2{
+    font-size: 18px;
+  }
+  h3{
+    font-size: 16px;
+    color: #747474;
   }
 }
-.resume-card{
-  .mat-card-header{
-    .mat-card-header-text{
-      margin: 0;
-    }
-    .mat-card-title{
-      font-size: 32px;
-    }
+.mat-chip.mat-chip-selected.mat-primary{
+  &.php{
+    color: rgba(#4a148c, 1);
+    background-color: rgba(#4a148c, 0.2);
   }
-  .mat-card-content{
-    .mat-card-title{
-      font-size: 20px;
+  &.mysql{
+    color: rgba(#00838f, 1);
+    background-color: rgba(#00838f, 0.2);
+  }
+  &.html{
+    color: rgba(#f57f17, 1);
+    background-color: rgba(#f57f17, 0.2);
+  }
+  &.css{
+    color: rgba(#1565c0, 1);
+    background-color: rgba(#1565c0, 0.2);
+  }
+  &.angular{
+    color: rgba(#e53935, 1);
+    background-color: rgba(#e53935, 0.2);
+  }
+}
+.mat-card{
+  .mat-card-title{
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .mat-card-subtitle{
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  p{
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  &.skills{
+    .mat-card-subtitle{
+      text-align: center;
     }
-    p{
-      padding-bottom: 20px;
+    ul{
+      font-size: 14px;
+      margin-bottom: 10px;
     }
   }
 }

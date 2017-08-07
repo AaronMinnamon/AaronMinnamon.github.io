@@ -8,9 +8,9 @@ import {trigger, animate, style, group, animateChild, query, stagger, transition
   animations: [
     trigger('pageAnimation', [
       transition(':enter', [
-        query('.mat-grid-tile', style({opacity: 0, transform: 'translateY(-100px)'})),
+        query('.mat-card', style({opacity: 0, transform: 'translateY(-100px)'})),
         group([
-          query('.mat-grid-tile', [
+          query('.mat-card', [
             stagger(100, [
               animate('800ms cubic-bezier(.35,0,.25,1)', style('*'))
             ])
@@ -20,7 +20,7 @@ import {trigger, animate, style, group, animateChild, query, stagger, transition
       transition(':leave', [
         style({ position: 'absolute', top: 0, left: 0, right: 0 }),
         group([
-          query('.mat-grid-tile', [
+          query('.mat-card', [
             stagger(-100, [
               animate('800ms cubic-bezier(.35,0,.25,1)', style({ opacity: 0, transform: 'translateY(100px)' }))
             ])

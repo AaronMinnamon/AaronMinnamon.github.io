@@ -2,8 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import 'hammerjs';
-import { MdCardModule,MdGridListModule, MdTooltipModule, MdListModule, MdSidenavModule, MdButtonModule, MdCheckboxModule, MdSlideToggleModule} from '@angular/material';
+import { MdChipsModule,MdCardModule,MdGridListModule, MdTooltipModule, MdListModule, MdSidenavModule, MdButtonModule, MdCheckboxModule, MdSlideToggleModule} from '@angular/material';
 import { ParticlesModule } from 'angular-particle';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { AppComponent } from './app.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
@@ -14,6 +15,8 @@ import { routing } from './app.routes';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ResumeComponent } from './resume/resume.component';
+
+import { ProjectsService } from './projects.service';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,8 @@ import { ResumeComponent } from './resume/resume.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
+    MdChipsModule,
     MdCardModule,
     MdGridListModule,
     MdTooltipModule,
@@ -40,7 +45,7 @@ import { ResumeComponent } from './resume/resume.component';
     ParticlesModule,
     routing
   ],
-  providers: [],
+  providers: [ProjectsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
