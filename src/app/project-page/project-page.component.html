@@ -1,0 +1,33 @@
+<div class="project-page-container">
+  <div class="container"
+       fxLayout
+       fxLayout.xs="column"
+       fxLayoutGap="10px"
+       fxLayoutGap.xs="0"
+       fxLayoutAlign="center center">
+    <md-card fxFlex="90%" class="project-page-card">
+      <md-card-content fxFlex>
+        <i [routerLink]="['/projects']" id="closeProject" class="material-icons">clear</i>
+        <md-card-title>Discover Your Volvo</md-card-title>
+        <md-card-subtitle>Volvo Sales Tool</md-card-subtitle>
+        <p>Role: Lead Developer</p>
+        <p>Period: 2015-2017</p>
+        <p>Context: Ardent Learning Inc.</p>
+        <p>Client: Volvo Cars US</p>
+        <p>Built with:</p>
+        <md-chip-list>
+          <md-chip selected="true" class="php">PHP</md-chip>
+          <md-chip selected="true" class="mysql">MySQL</md-chip>
+          <md-chip selected="true" class="html">HTML</md-chip>
+          <md-chip selected="true" class="css">CSS</md-chip>
+        </md-chip-list>
+        <p><i class="material-icons">laptop</i><i class="material-icons">tablet</i><i class="material-icons">phone_iphone</i></p>
+      </md-card-content>
+      <div class="visual-container" fxFlex>
+          <video id="singleVideo" autoplay loop muted preload="auto">
+              <source src="assets/videos/dyv.mp4" type="video/mp4">
+          </video>
+      </div>
+    </md-card>
+  </div>
+</div>

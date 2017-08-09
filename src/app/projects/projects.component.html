@@ -1,68 +1,67 @@
 <div class="content-container">
-  <md-grid-list cols="4" rowHeight="100px">
-    <md-grid-tile
-        [colspan]="3"
-        [rowspan]="2">
-        <md-card class="project-card">
-          <md-card-content>
-            <md-card-title>Discover Your Volvo</md-card-title>
-            <md-card-subtitle>Volvo Sales Tool</md-card-subtitle>
-            <md-chip-list>
-              <md-chip selected="true" class="php">PHP</md-chip>
-              <md-chip selected="true" class="mysql">MySQL</md-chip>
-              <md-chip selected="true" class="html">HTML</md-chip>
-              <md-chip selected="true" class="css">CSS</md-chip>
-            </md-chip-list>
-          </md-card-content>
-        </md-card>
-    </md-grid-tile>
-    <md-grid-tile
-        [colspan]="2"
-        [rowspan]="2">
-        <md-card class="project-card">
-          <md-card-content>
-            <md-card-title>Kia Web based training</md-card-title>
-            <md-card-subtitle>Micro-learning courses for Kia product</md-card-subtitle>
-            <md-chip-list>
-              <md-chip selected="true" class="php">PHP</md-chip>
-              <md-chip selected="true" class="mysql">MySQL</md-chip>
-              <md-chip selected="true" class="html">HTML</md-chip>
-              <md-chip selected="true" class="css">CSS</md-chip>
-            </md-chip-list>
-          </md-card-content>
-        </md-card>
-    </md-grid-tile>
-    <md-grid-tile
-        [colspan]="2"
-        [rowspan]="2">
-        <md-card class="project-card">
-          <md-card-content>
-            <md-card-title>Nissan SERV</md-card-title>
-            <md-card-subtitle>iPad app developed for Nissan Service excellence program</md-card-subtitle>
-            <md-chip-list>
-              <md-chip selected="true" class="php">PHP</md-chip>
-              <md-chip selected="true" class="mysql">MySQL</md-chip>
-              <md-chip selected="true" class="html">HTML</md-chip>
-              <md-chip selected="true" class="css">CSS</md-chip>
-            </md-chip-list>
-          </md-card-content>
-        </md-card>
-    </md-grid-tile>
-    <md-grid-tile
-        [colspan]="2"
-        [rowspan]="2">
-        <md-card class="project-card">
-          <md-card-content>
-            <md-card-title>PGI Pop Quiz</md-card-title>
-            <md-card-subtitle>Mobile app for bite size quizzes</md-card-subtitle>
-            <md-chip-list>
-              <md-chip selected="true" class="php">PHP</md-chip>
-              <md-chip selected="true" class="mysql">MySQL</md-chip>
-              <md-chip selected="true" class="html">HTML</md-chip>
-              <md-chip selected="true" class="css">CSS</md-chip>
-            </md-chip-list>
-          </md-card-content>
-        </md-card>
-    </md-grid-tile>
-  </md-grid-list>
+  <div class="container"
+       fxLayout
+       fxLayout.xs="column"
+       fxLayoutGap="0px"
+       fxLayoutGap.xs="0"
+       fxLayoutAlign="center center">
+      <md-card [routerLink]="['dyv']" fxFlex class="project-card">
+        <md-card-content>
+          <md-card-title>Discover Your Volvo</md-card-title>
+          <md-card-subtitle>Volvo Sales Tool</md-card-subtitle>
+          <md-chip-list>
+            <md-chip selected="true" class="php">PHP</md-chip>
+            <md-chip selected="true" class="mysql">MySQL</md-chip>
+            <md-chip selected="true" class="html">HTML</md-chip>
+            <md-chip selected="true" class="css">CSS</md-chip>
+          </md-chip-list>
+          <div class="see-more-overlay"></div>
+          <div class="see-more">See more <i class="material-icons">chevron_right</i></div>
+          <!-- <button md-raised-button color="accent" [routerLink]="['dyv']">More</button> -->
+        </md-card-content>
+      </md-card>
+      <md-card fxFlex class="project-card">
+        <md-card-content>
+          <md-card-title>Kia Web based training</md-card-title>
+          <md-card-subtitle>Micro-learning courses for Kia product</md-card-subtitle>
+          <md-chip-list>
+            <md-chip selected="true" class="php">PHP</md-chip>
+            <md-chip selected="true" class="mysql">MySQL</md-chip>
+            <md-chip selected="true" class="html">HTML</md-chip>
+            <md-chip selected="true" class="css">CSS</md-chip>
+          </md-chip-list>
+        </md-card-content>
+      </md-card>
+    </div>
+    <div class="container"
+         fxLayout
+         fxLayout.xs="column"
+         fxLayoutGap="0px"
+         fxLayoutGap.xs="0">
+      <md-card fxFlex class="project-card">
+        <md-card-content>
+          <md-card-title>Nissan SERV</md-card-title>
+          <md-card-subtitle>iPad app developed for Nissan Service excellence program</md-card-subtitle>
+          <md-chip-list>
+            <md-chip selected="true" class="php">PHP</md-chip>
+            <md-chip selected="true" class="mysql">MySQL</md-chip>
+            <md-chip selected="true" class="html">HTML</md-chip>
+            <md-chip selected="true" class="css">CSS</md-chip>
+          </md-chip-list>
+        </md-card-content>
+      </md-card>
+      <md-card fxFlex class="project-card">
+        <md-card-content>
+          <md-card-title>PGI Pop Quiz</md-card-title>
+          <md-card-subtitle>Mobile app for bite size quizzes</md-card-subtitle>
+          <md-chip-list>
+            <md-chip selected="true" class="php">PHP</md-chip>
+            <md-chip selected="true" class="mysql">MySQL</md-chip>
+            <md-chip selected="true" class="html">HTML</md-chip>
+            <md-chip selected="true" class="css">CSS</md-chip>
+          </md-chip-list>
+        </md-card-content>
+      </md-card>
+  </div>
+  <router-outlet #outlet="outlet"></router-outlet>
 </div>

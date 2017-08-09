@@ -15,6 +15,10 @@
 body{
   font-family:'Roboto Mono',monospace,'Helvetica', 'Arial', 'Sans-Serif';
 }
+video{
+  max-width: 400px;
+  max-height: 300px;
+}
 
 html, body, md-sidenav-container, .my-content {
   margin: 0;
@@ -55,6 +59,7 @@ html, body, md-sidenav-container, .my-content {
 .content-container{
   position: relative;
   z-index: 3;
+  height: 100%;
 }
 .project-card{
   text-align: center;
@@ -65,8 +70,16 @@ html, body, md-sidenav-container, .my-content {
     font-size: 16px;
     color: #747474;
   }
+  button{
+    margin: 10px 0;
+  }
+}
+.mat-chip-list{
+  display: inline-block;
+  margin: 5px auto;
 }
 .mat-chip.mat-chip-selected.mat-primary{
+  font-weight: bold;
   &.php{
     color: rgba(#4a148c, 1);
     background-color: rgba(#4a148c, 0.2);
@@ -103,13 +116,65 @@ html, body, md-sidenav-container, .my-content {
     font-size: 12px;
     margin-bottom: 10px;
   }
-  &.skills{
-    .mat-card-subtitle{
-      text-align: center;
-    }
-    ul{
-      font-size: 14px;
-      margin-bottom: 10px;
+}
+.project-page-container{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.64);
+}
+.mat-card.project-page-card{
+  padding-top: 45px;
+  i{
+    padding: 5px;
+    &#closeProject{
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      cursor: pointer;
     }
   }
+}
+.mat-card.project-card .see-more{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  background-color: mat-color($accent);
+  left: 0;
+  vertical-align: middle;
+  line-height: 50px;
+  bottom: -50px;
+  transition: all 300ms cubic-bezier(.35,0,.25,1);
+  i{
+    vertical-align: middle;
+    position: absolute;
+    line-height: 50px;
+  }
+}
+.mat-card.project-card:hover .see-more{
+  bottom: 0;
+}
+.mat-card.project-card .see-more-overlay{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  background-color: rgba(#ffffff, 0.6);
+  left: 0;
+  height: 100%;
+  top: -100%;
+  transition: all 300ms cubic-bezier(.35,0,.25,1);
+}
+.mat-card.project-card:hover .see-more-overlay{
+  top: 0;
+}
+
+.mat-card.project-card{
+  overflow: hidden;
+  margin: 3px;
+  transition: all 300ms cubic-bezier(.35,0,.25,1);
+}
+.mat-card.project-card:hover{
+  cursor: pointer;
 }

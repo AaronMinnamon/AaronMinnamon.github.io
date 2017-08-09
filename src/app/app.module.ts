@@ -5,6 +5,10 @@ import 'hammerjs';
 import { MdChipsModule,MdCardModule,MdGridListModule, MdTooltipModule, MdListModule, MdSidenavModule, MdButtonModule, MdCheckboxModule, MdSlideToggleModule} from '@angular/material';
 import { ParticlesModule } from 'angular-particle';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import {VgCoreModule} from 'videogular2/core';
+import {VgControlsModule} from 'videogular2/controls';
+import {VgOverlayPlayModule} from 'videogular2/overlay-play';
+import {VgBufferingModule} from 'videogular2/buffering';
 
 import { AppComponent } from './app.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
@@ -17,6 +21,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ResumeComponent } from './resume/resume.component';
 
 import { ProjectsService } from './projects.service';
+import { ProjectPageComponent } from './project-page/project-page.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +32,8 @@ import { ProjectsService } from './projects.service';
     ProjectsComponent,
     AboutComponent,
     ContactComponent,
-    ResumeComponent
+    ResumeComponent,
+    ProjectPageComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +49,11 @@ import { ProjectsService } from './projects.service';
     MdCheckboxModule,
     MdSlideToggleModule,
     ParticlesModule,
-    routing
+    routing,
+    VgCoreModule,
+    VgControlsModule,
+    VgOverlayPlayModule,
+    VgBufferingModule
   ],
   providers: [ProjectsService],
   bootstrap: [AppComponent]
