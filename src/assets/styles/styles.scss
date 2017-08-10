@@ -18,6 +18,12 @@ body{
 video{
   max-width: 400px;
   max-height: 300px;
+  height: auto;
+  width: 100%;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0px 4px 30px 1px rgba(150,150,150,1);
+  -moz-box-shadow: 0px 4px 30px 1px rgba(150,150,150,1);
+  box-shadow: 0px 4px 30px 1px rgba(150,150,150,1);
 }
 
 html, body, md-sidenav-container, .my-content {
@@ -119,6 +125,7 @@ html, body, md-sidenav-container, .my-content {
 }
 .project-page-container{
   position: absolute;
+  padding: 20px 0;
   top: 0%;
   left: 0%;
   width: 100%;
@@ -147,6 +154,7 @@ html, body, md-sidenav-container, .my-content {
   line-height: 50px;
   bottom: -50px;
   transition: all 300ms cubic-bezier(.35,0,.25,1);
+  text-transform: uppercase;
   i{
     vertical-align: middle;
     position: absolute;
@@ -160,14 +168,14 @@ html, body, md-sidenav-container, .my-content {
   position: absolute;
   text-align: center;
   width: 100%;
-  background-color: rgba(#ffffff, 0.6);
+  background-color: rgba(mat-color($primary,lighter), 0.6);
   left: 0;
   height: 100%;
-  top: -100%;
+  bottom: -100%;
   transition: all 300ms cubic-bezier(.35,0,.25,1);
 }
 .mat-card.project-card:hover .see-more-overlay{
-  top: 0;
+  bottom: 0;
 }
 
 .mat-card.project-card{
