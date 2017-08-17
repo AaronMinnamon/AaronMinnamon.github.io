@@ -2,6 +2,7 @@
 @import 'reset';
 @import '~@angular/material/theming';
 @import 'aaron-material-theme';
+@import 'flaticon';
 @include angular-material-theme($light-theme);
   // retrieve variables from theme
  // (all possible variables, use only what you really need)
@@ -15,11 +16,7 @@
 body{
   font-family:'Roboto Mono',monospace,'Helvetica', 'Arial', 'Sans-Serif';
 }
-video{
-  max-width: 400px;
-  max-height: 300px;
-  height: auto;
-  width: 100%;
+iframe{
   margin-bottom: 20px;
   -webkit-box-shadow: 0px 4px 30px 1px rgba(150,150,150,1);
   -moz-box-shadow: 0px 4px 30px 1px rgba(150,150,150,1);
@@ -55,6 +52,22 @@ html, body, md-sidenav-container, .my-content {
    width: 100%;
    text-align: center;
  }
+}
+.social-icons-container{
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 2em;
+  li{
+    padding: 10px;
+  }
+  li a{
+    color: mat-color($primary);
+    &:hover{
+      color: mat-color($accent);
+    }
+  }
 }
 .my-content{
   background: #C9D6FF;  /* fallback for old browsers */
@@ -114,6 +127,19 @@ html, body, md-sidenav-container, .my-content {
     color: rgba(#002faa, 1);
     background-color: rgba(#002faa, 0.2);
   }
+  &.sass{
+    color: rgba(#cc6699, 1);
+    background-color: rgba(#cc6699, 0.2);
+  }
+  &.gulp {
+    color: rgba(#cf4646, 1);
+    background-color: rgba(#cf4646, 0.2);
+  }
+  &.mongo {
+    color: rgba(#2A7E21, 1);
+    background-color: rgba(#2A7E21, 0.2);
+  }
+
 }
 .mat-card{
   .mat-card-title{
@@ -127,28 +153,9 @@ html, body, md-sidenav-container, .my-content {
     margin-bottom: 10px;
   }
   p{
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 10px;
-  }
-}
-.project-page-container{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.64);
-}
-.mat-card.project-page-card{
-  padding-top: 45px;
-  i{
-    padding: 5px;
-    &#closeProject{
-      position: absolute;
-      top: 5px;
-      right: 5px;
-      cursor: pointer;
-    }
+    line-height: normal;
   }
 }
 .mat-card.project-card .see-more{
@@ -177,12 +184,13 @@ html, body, md-sidenav-container, .my-content {
   width: 100%;
   background-color: rgba(mat-color($primary,lighter), 0.6);
   left: 0;
+  bottom: 0;
   height: 100%;
-  bottom: -100%;
+  opacity: 0;
   transition: all 300ms cubic-bezier(.35,0,.25,1);
 }
 .mat-card.project-card:hover .see-more-overlay{
-  bottom: 0;
+  opacity: 1;
 }
 
 .mat-card.project-card{
@@ -193,3 +201,37 @@ html, body, md-sidenav-container, .my-content {
 .mat-card.project-card:hover{
   cursor: pointer;
 }
+
+.project-page-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.64);
+}
+
+.mat-card.project-page-card {
+  padding-top: 45px;
+  margin: 30px;
+  .visual-container{
+    text-align: center;
+  }
+  .mat-card-content {
+    max-width: 640px;
+    span{
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+  i {
+    padding: 5px;
+    &#closeProject {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      cursor: pointer;
+    }
+  }
+}
+
