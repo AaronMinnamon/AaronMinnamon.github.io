@@ -21,10 +21,11 @@ export class ProjectsService {
             {class:'php',text:'PHP'},
             {class:'jquery',text:'jQuery'}
           ],
-          devices:['laptop','tablet','phone_iphone']
+          devices:['laptop','tablet','phone_iphone'],
+          clips:['dyv.mp4','dyv_video.mp4']
         },
         {
-          projectID: "kia",
+          projectID: "kia-niro",
           title: "Kia Web Based Training",
           subtitle: "Web based micro learning courses",
           role: "Lead Developer",
@@ -36,7 +37,26 @@ export class ProjectsService {
             {class:'mysql',text:'MySQL'},
             {class:'php',text:'PHP'},
             {class:'jquery',text:'jQuery'}
-          ]
+          ],
+          devices:['laptop','tablet'],
+          clips:['niro_walkaround.mp4','niro_facts.mp4']
+        },
+        {
+          projectID: "kia-rio",
+          title: "Kia Web Based Training",
+          subtitle: "Web based micro learning courses",
+          role: "Lead Developer",
+          client: "Volvo Cars US",
+          period: "2015-2017",
+          context: "Ardent Learning Inc.",
+          languages:[
+            {class:'html',text:'HTML'},
+            {class:'mysql',text:'MySQL'},
+            {class:'php',text:'PHP'},
+            {class:'jquery',text:'jQuery'}
+          ],
+          devices:['laptop','tablet'],
+          clips:['rio_bingo.mp4','rio_daniel.mp4']
         },
         {
           projectID: "nissan",
@@ -51,7 +71,9 @@ export class ProjectsService {
             {class:'mysql',text:'MySQL'},
             {class:'php',text:'PHP'},
             {class:'jquery',text:'jQuery'}
-          ]
+          ],
+          devices:['tablet'],
+          clips:['nserv_intro.mp4','nserv_checks.mp4']
         },
         {
           projectID: "pgi",
@@ -66,7 +88,9 @@ export class ProjectsService {
             {class:'mysql',text:'MySQL'},
             {class:'php',text:'PHP'},
             {class:'jquery',text:'jQuery'}
-          ]
+          ],
+          devices:['laptop','tablet','phone_iphone'],
+          clips:['pgi_intro.mp4','pgi_summary.mp4']
         }
       ];
   }

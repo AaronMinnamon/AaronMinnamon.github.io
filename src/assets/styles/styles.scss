@@ -2,6 +2,7 @@
 @import 'reset';
 @import '~@angular/material/theming';
 @import 'aaron-material-theme';
+@import 'flaticon';
 @include angular-material-theme($light-theme);
   // retrieve variables from theme
  // (all possible variables, use only what you really need)
@@ -56,6 +57,22 @@ html, body, md-sidenav-container, .my-content {
    text-align: center;
  }
 }
+.social-icons-container{
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 2em;
+  li{
+    padding: 10px;
+  }
+  li a{
+    color: mat-color($primary);
+    &:hover{
+      color: mat-color($accent);
+    }
+  }
+}
 .my-content{
   background: #C9D6FF;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #E2E2E2, #e2f1f8);  /* Chrome 10-25, Safari 5.1-6 */
@@ -106,6 +123,14 @@ html, body, md-sidenav-container, .my-content {
     color: rgba(#e53935, 1);
     background-color: rgba(#e53935, 0.2);
   }
+  &.ionic{
+    color: rgba(#3566e6, 1);
+    background-color: rgba(#3566e6, 0.2);
+  }
+  &.jquery{
+    color: rgba(#002faa, 1);
+    background-color: rgba(#002faa, 0.2);
+  }
 }
 .mat-card{
   .mat-card-title{
@@ -125,9 +150,8 @@ html, body, md-sidenav-container, .my-content {
 }
 .project-page-container{
   position: absolute;
-  padding: 20px 0;
-  top: 0%;
-  left: 0%;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.64);

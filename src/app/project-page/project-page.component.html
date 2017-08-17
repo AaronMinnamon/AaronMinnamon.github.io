@@ -1,11 +1,6 @@
 <div class="project-page-container">
-  <div class="container"
-       fxLayout
-       fxLayout.xs="column"
-       fxLayoutGap="0px"
-       fxLayoutGap.xs="0"
-       fxLayoutAlign="center center">
-    <md-card fxFlex="90%" class="project-page-card">
+  <div>
+    <md-card class="project-page-card">
       <md-card-content fxFlex>
         <i [routerLink]="['/projects']" id="closeProject" class="material-icons">clear</i>
         <md-card-title>{{project.title}}</md-card-title>
@@ -20,18 +15,12 @@
         </md-chip-list>
         <p>
           <i *ngFor="let device of project.devices" class="material-icons">{{device}}</i>
-          <!-- <i class="material-icons">laptop</i>
-          <i class="material-icons">tablet</i>
-          <i class="material-icons">phone_iphone</i> -->
         </p>
       </md-card-content>
       <div class="visual-container" fxFlex>
-          <video id="singleVideo" autoplay loop muted preload="auto">
-              <source src="assets/videos/dyv.mp4" type="video/mp4">
-          </video>
-          <video id="singleVideo" autoplay loop muted preload="auto">
-              <source src="assets/videos/dyv_video.mp4" type="video/mp4">
-          </video>
+        <video *ngFor="let clip of project.clips" autoplay loop muted preload="auto">
+            <source src="assets/videos/{{clip}}" type="video/mp4">
+        </video>
       </div>
     </md-card>
   </div>
