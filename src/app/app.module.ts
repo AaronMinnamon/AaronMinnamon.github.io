@@ -2,14 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import 'hammerjs';
+// tslint:disable-next-line:max-line-length
 import { MdChipsModule, MdCardModule, MdGridListModule, MdTooltipModule, MdListModule, MdSidenavModule, MdButtonModule, MdCheckboxModule, MdSlideToggleModule} from '@angular/material';
 import { ParticlesModule } from 'angular-particle';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import {VgCoreModule} from 'videogular2/core';
-import {VgControlsModule} from 'videogular2/controls';
-import {VgOverlayPlayModule} from 'videogular2/overlay-play';
-import {VgBufferingModule} from 'videogular2/buffering';
 
+import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
 import { AppComponent } from './app.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { ParticlesComponent } from './particles/particles.component';
@@ -39,6 +37,7 @@ import { ProjectPageComponent } from './project-page/project-page.component';
     BrowserModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
+    Angulartics2Module,
     MdChipsModule,
     MdCardModule,
     MdGridListModule,
@@ -49,11 +48,7 @@ import { ProjectPageComponent } from './project-page/project-page.component';
     MdCheckboxModule,
     MdSlideToggleModule,
     ParticlesModule,
-    routing,
-    VgCoreModule,
-    VgControlsModule,
-    VgOverlayPlayModule,
-    VgBufferingModule
+    routing
   ],
   providers: [ProjectsService],
   bootstrap: [AppComponent]

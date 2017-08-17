@@ -25,7 +25,7 @@ export class ProjectsService {
             {class: 'jquery', text: 'jQuery'}
           ],
           devices: ['laptop', 'tablet', 'phone_iphone'],
-          vimeoID: '230027821'
+          vimeoID: '230078858'
         },
         {
           projectID: 'kia-niro',
@@ -45,7 +45,7 @@ export class ProjectsService {
             { class: 'jquery', text: 'jQuery' }
           ],
           devices: ['laptop', 'tablet'],
-          vimeoID: '230027821'
+          vimeoID: '230079635'
         },
         {
           projectID: 'kia-rio',
@@ -65,7 +65,7 @@ export class ProjectsService {
             {class: 'jquery', text: 'jQuery'}
           ],
           devices: ['laptop', 'tablet'],
-          vimeoID: '230027821'
+          vimeoID: '230079256'
         },
         {
           projectID: 'nissan',
@@ -85,7 +85,7 @@ export class ProjectsService {
             {class: 'sass', text: 'Sass'}
           ],
           devices: ['tablet'],
-          vimeoID: '230027821'
+          vimeoID: '230079397'
         },
         {
           projectID: 'pgi',
@@ -105,7 +105,7 @@ export class ProjectsService {
             {class: 'sass', text: 'Sass'}
           ],
           devices: ['laptop', 'tablet', 'phone_iphone'],
-          vimeoID: '230027821'
+          vimeoID: '230079320'
         }
       ];
   }
