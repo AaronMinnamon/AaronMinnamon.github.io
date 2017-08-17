@@ -35,7 +35,9 @@ import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browse
       ]),
       transition(':leave', [
         group([
-          query('.project-page-container', [ animate('800ms cubic-bezier(.35,0,.25,1)', style({ opacity: 0 }))])
+          // tslint:disable-next-line:max-line-length
+          query('.project-page-container', [animate('800ms cubic-bezier(.35,0,.25,1)', style({ opacity: 0}))]),
+          query('.mat-card', [animate('800ms cubic-bezier(.35,0,.25,1)', style({ opacity: 0, transform: 'translateY(200px)'}))])
         ])
       ])
     ])

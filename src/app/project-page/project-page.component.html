@@ -16,14 +16,17 @@
       </div>
       <md-card-content fxFlex>
         <i [routerLink]="['/projects']" id="closeProject" class="material-icons">clear</i>
-        <p>Role: {{project.role}}</p>
-        <p>Period: {{project.period}}</p>
-        <p>Context: {{project.context}}</p>
-        <p>Client: {{project.client}}</p>
-        <p>Built with:</p>
+        <p><span>Overview:</span> {{project.overview}}</p>
+        <p><span>Responsibilites:</span> {{project.responsibility}}</p>
+        <p><span>Role:</span> {{project.role}}</p>
+        <p><span>Period:</span> {{project.period}}</p>
+        <p><span>Context:</span> {{project.context}}</p>
+        <p><span>Client:</span> {{project.client}}</p>
+        <p><span>Built using:</span></p>
         <md-chip-list>
           <md-chip *ngFor="let language of project.languages" selected="true" class="{{language.class}}">{{language.text}}</md-chip>
         </md-chip-list>
+        <p><span>Support:</span></p>
         <p>
           <i *ngFor="let device of project.devices" class="material-icons">{{device}}</i>
         </p>
