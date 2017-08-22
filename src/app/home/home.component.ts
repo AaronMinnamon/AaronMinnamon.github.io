@@ -10,15 +10,26 @@ import { Component, OnInit, HostBinding } from '@angular/core';
     trigger('pageAnimation', [
       transition(':enter', [
         query('.home-container', style({opacity: 0, transform: 'translateY(-100px)'})),
+        query('.colored-overlay', style({ left: 0 })),
         group([
           query('.home-container', [
             animate('800ms cubic-bezier(.35,0,.25,1)', style('*'))
+          ]),
+        ]),
+        group([
+          query('.colored-overlay', [
+            animate('800ms ease', style('*'))
           ])
         ])
       ]),
       transition(':leave', [
-        style({ position: 'absolute', top: 0, left: 0, right: 0 }),
-        animate('500ms cubic-bezier(.35,0,.25,1)', style({ opacity: 0, transform: 'translateY(100px)' }))
+        group([
+          query('.home-container', [
+            stagger(-100, [
+              animate('800ms cubic-bezier(.35,0,.25,1)', style({ opacity: 0, transform: 'translateY(100px)' }))
+            ])
+          ])
+        ])
       ])
     ])
   ]

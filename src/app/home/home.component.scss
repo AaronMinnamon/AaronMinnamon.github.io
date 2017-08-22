@@ -1,21 +1,23 @@
 .home-container{
-  padding: 200px;
-  box-sizing: border-box;
   color: #444;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
+  margin-top: -200px;
+  position: relative;
+  overflow: hidden;
   h1{
+    position: relative;
     font-size: 60px;
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 0.5em;
   }
   h2{
+    position: relative;
     font-size: 36px;
     font-weight: 300;
     margin-bottom: 0.5em;
+  }
+  div.button-container{
+    position: relative;
   }
   button{
     text-transform: uppercase;

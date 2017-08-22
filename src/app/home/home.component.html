@@ -1,7 +1,43 @@
-<div class="content-container home-container">
-  <h1>Aaron Minnamon</h1>
-  <h2>Javascript Developer</h2>
-  <h2>Digital Craftsman</h2>
-  <button md-raised-button color="accent">My Work</button>
-  <button md-raised-button color="primary">Contact Me</button>
+<div class="content-container">
+    <div class="container"
+          fxLayout
+          fxFlex
+          fxLayout.xs="column"
+          fxLayoutGap="0px"
+          fxLayoutGap.xs="0"
+          fxLayoutAlign="center center">
+      <div class="container"
+          fxLayout
+          fxFlex="90"
+          fxLayout.xs="column"
+          fxLayoutGap="0px"
+          fxLayoutGap.xs="0"
+          fxLayoutAlign="flex-start stretch">
+          <div class="home-container">
+            <h1>
+              Aaron Minnamon
+              <div class="colored-overlay accent">
+                <div class="colored-overlay primary"></div>
+              </div>
+            </h1>
+            <h2>Javascript Developer
+              <div class="colored-overlay accent">
+                <div class="colored-overlay primary"></div>
+              </div>
+            </h2>
+            <h2>Digital Craftsman
+              <div class="colored-overlay accent">
+                <div class="colored-overlay primary"></div>
+              </div>
+            </h2>
+            <div class="button-container">
+              <button md-raised-button color="accent" [routerLink]="['/projects']">My Work</button>
+              <button md-raised-button color="primary" [routerLink]="['/contact']">Contact Me</button>
+              <div class="colored-overlay accent">
+                <div class="colored-overlay primary"></div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
 </div>
