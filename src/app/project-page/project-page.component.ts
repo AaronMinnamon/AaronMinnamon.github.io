@@ -12,10 +12,11 @@ import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browse
   animations: [
     trigger('pageAnimation', [
       transition(':enter', [
-        query('.mat-card', style({opacity: 0, transform: 'translateY(-200px)'})),
+        query('.project-page-container', style({ backgroundColor: 'rgba(0, 0, 0, 0)' })),
+        query('.mat-card', style({ opacity: 0, backgroundColor: '#607d8b', transform: 'translateY(-200px)'})),
         query('.mat-card p, .mat-card-title, .mat-card-subtitle,.mat-chip', style({opacity: 0, transform: 'translateY(-100px)'})),
         query('.mat-card iframe', style({opacity: 0})),
-        query('.mat-card', [
+        query('.mat-card,.project-page-container', [
           stagger(100, [
             animate('800ms cubic-bezier(.35,0,.25,1)', style('*'))
           ])

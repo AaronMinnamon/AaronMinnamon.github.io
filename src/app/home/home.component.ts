@@ -8,21 +8,6 @@ import { Component, OnInit, HostBinding } from '@angular/core';
   styleUrls: ['./home.component.scss'],
   animations: [
     trigger('pageAnimation', [
-      // transition(':enter', [
-      //   query('.home-container h1', style({opacity: 0, transform:'scale(0)'})),
-      //   query('.home-container h2', style({opacity: 0, transform:'scale(0)'})),
-      //   query('.home-container button', style({opacity: 0})),
-      //   group([
-      //     query('.home-container h1,h2', [
-      //       animate('800ms cubic-bezier(.35,0,.25,1)', style('*'))
-      //     ]),
-      //     query('.home-container button', [
-      //       stagger(100, [
-      //         animate('800ms cubic-bezier(.35,0,.25,1)', style('*'))
-      //       ])
-      //     ])
-      //   ])
-      // ]),
       transition(':enter', [
         query('.home-container', style({opacity: 0, transform: 'translateY(-100px)'})),
         group([

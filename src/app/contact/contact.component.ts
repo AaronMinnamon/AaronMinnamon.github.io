@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GmapsComponent } from '../gmaps/gmaps.component';
 
 @Component({
   selector: 'app-contact',

@@ -1,30 +1,61 @@
 <div class="content-container">
-  <md-grid-list class="contact-grid" cols="3">
-
-    <md-grid-tile
-        [colspan]="1"
-        [rowspan]="1">
-        <md-card class="resume-card">
-          <md-card-content>
-            <md-card-title>Contact</md-card-title>
-            <md-list>
-              <md-list-item>
-                <md-icon md-list-icon><i class="material-icons">phone</i></md-icon>
-                <p md-line> (1) 315-576-7838 </p>
-              </md-list-item>
-              <md-list-item>
-                <md-icon md-list-icon><i class="material-icons">email</i></md-icon>
-                <p md-line> aminnamon18@gmail.com </p>
-              </md-list-item>
-              <md-list-item>
-                <md-icon md-list-icon><i class="material-icons">near_me</i></md-icon>
-                <p md-line> 208 Mill Street </p>
-                <p md-line> Rochester, NY 14614 </p>
-              </md-list-item>
-            </md-list>
-          </md-card-content>
-        </md-card>
-    </md-grid-tile>
-
-  </md-grid-list>
+  <div class="container"
+       fxLayout
+       fxFlex
+       fxLayout.xs="column"
+       fxLayoutGap="0px"
+       fxLayoutGap.xs="0"
+       fxLayoutAlign="center center">
+         <div class="container"
+              fxLayout
+              fxFlex="60"
+              fxLayout.xs="column"
+              fxLayoutGap="0px"
+              fxLayoutGap.xs="0"
+              fxLayoutAlign="center stretch">
+              <md-card class="resume-card">
+                <md-card-content>
+                  <md-card-title>Contact</md-card-title>
+                  <md-list>
+                    <md-list-item>
+                      <md-icon md-list-icon><i class="material-icons">phone</i></md-icon>
+                      <p md-line> (1) 315-576-7838 </p>
+                    </md-list-item>
+                    <a href="mailto:aminnamon18@gmail.com">
+                    <md-list-item>
+                      <md-icon md-list-icon><i class="material-icons">email</i></md-icon>
+                      <p md-line> aminnamon18@gmail.com </p>
+                    </md-list-item>
+                    </a>
+                    <md-list-item>
+                      <md-icon md-list-icon><i class="material-icons">near_me</i></md-icon>
+                      <p md-line> 208 Mill Street </p>
+                      <p md-line> Rochester, NY 14614 </p>
+                    </md-list-item>
+                    <a href="https://github.com/AaronMinnamon" target="_blank">
+                    <md-list-item>
+                      <md-icon md-list-icon><i class="fi flaticon-social"></i></md-icon>
+                      <p md-line> /AaronMinnamon </p>
+                    </md-list-item>
+                    </a>
+                    <a href="https://www.linkedin.com/in/aaronminnamon/" target="_blank">
+                    <md-list-item>
+                      <md-icon md-list-icon><i class="fi flaticon-linkedin-logo"></i></md-icon>
+                      <p md-line> /aaronminnamon </p>
+                    </md-list-item>
+                    </a>
+                    <a href="https://codepen.io/iamminn/" target="_blank">
+                    <md-list-item>
+                      <md-icon md-list-icon><i class="fi flaticon-3d-outlined-shape"></i></md-icon>
+                      <p md-line> /iamminn </p>
+                    </md-list-item>
+                    </a>
+                  </md-list>
+                </md-card-content>
+              </md-card>
+              <md-card class="maps-card" fxFlex>
+                <app-gmaps></app-gmaps>
+              </md-card>
+         </div>
+  </div>
 </div>

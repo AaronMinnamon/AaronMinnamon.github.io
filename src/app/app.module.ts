@@ -6,6 +6,7 @@ import 'hammerjs';
 import { MdChipsModule, MdCardModule, MdGridListModule, MdTooltipModule, MdListModule, MdSidenavModule, MdButtonModule, MdCheckboxModule, MdSlideToggleModule} from '@angular/material';
 import { ParticlesModule } from 'angular-particle';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { AgmCoreModule } from '@agm/core';
 
 import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import { ResumeComponent } from './resume/resume.component';
 
 import { ProjectsService } from './projects.service';
 import { ProjectPageComponent } from './project-page/project-page.component';
+import { GmapsComponent } from './gmaps/gmaps.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { ProjectPageComponent } from './project-page/project-page.component';
     AboutComponent,
     ContactComponent,
     ResumeComponent,
-    ProjectPageComponent
+    ProjectPageComponent,
+    GmapsComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +51,9 @@ import { ProjectPageComponent } from './project-page/project-page.component';
     MdCheckboxModule,
     MdSlideToggleModule,
     ParticlesModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBIGPkMqioWR7mSTAUDGHs0G9rDEFTOCbY'
+    }),
     routing
   ],
   providers: [ProjectsService],
