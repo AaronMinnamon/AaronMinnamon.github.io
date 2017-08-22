@@ -35,6 +35,46 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 // `.unicorn-dark-theme` will be affected by this alternate dark theme instead of the default theme.
 .dark-theme {
   @include angular-material-theme($dark-theme);
+  h1{
+    color: rgba(255, 255, 255, 1);
+  }
+  h2{
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .mat-chip.mat-chip-selected.mat-primary {
+    font-weight: bold;
+    &.php {
+      background-color: rgba(#4a148c, 1);
+    }
+    &.mysql {
+      background-color: rgba(#00838f, 1);
+    }
+    &.html {
+      background-color: rgba(#f57f17, 1);
+    }
+    &.css {
+      background-color: rgba(#1565c0, 1);
+    }
+    &.angular {
+      background-color: rgba(#e53935, 1);
+    }
+    &.ionic {
+      background-color: rgba(#3566e6, 1);
+    }
+    &.jquery {
+      background-color: rgba(#002faa, 1);
+    }
+    &.sass {
+      background-color: rgba(#cc6699, 1);
+    }
+    &.gulp {
+      background-color: rgba(#cf4646, 1);
+    }
+    &.mongo {
+      background-color: rgba(#2A7E21, 1);
+    }
+  }
+
   .my-content{
     background: #232526;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
