@@ -12,8 +12,8 @@ export class ProjectsService {
           title: 'Discover Your Volvo',
           subtitle: 'Volvo Cars US & Canada',
           // tslint:disable-next-line:max-line-length
-          overview: 'Discover Your Volvo is a web application used by Volvo sales consultants to build customer profiles based on vehicles and features they are looking for in a new car. Featuring - Dual Language Support (English, French), Instant comparisons to competitive brands, Auto generated recommendations.',
-          responsibility: 'As the Lead Feature Developer, I was responsible for handling client requests for new features to be added to the tool. Working closely with the creative team to prototype features to secure client approval and integrate into the production tool.',
+          overview: 'Discover Your Volvo is a web application used by Volvo sales consultants to build customer profiles based on vehicles and features they are looking for in a new car. Featuring - Dual Language Support (English, French), Instant comparisons to competitive brands, and auto generated recommendations.',
+          responsibility: 'As the Lead Feature Developer, I was responsible for handling client requests for new features to be added to the tool. Working closely with the creative team I prototyped features to secure client approval and integrate into the production tool.',
           role: 'Lead Feature Developer',
           client: 'Volvo Cars US & Canada',
           period: '2015-2017',
@@ -33,7 +33,7 @@ export class ProjectsService {
           subtitle: 'Kia University',
           // tslint:disable-next-line:max-line-length
           overview: 'This would be the first in a series of web based courses developed for Kia by Ardent Learning. Courses are desktop and iPad compatible integrated within the Kia University LMS',
-          responsibility: 'As the Lead Developer, I was responsible for creating a course shell that would integrate within Kia\'s LMS in addition to developing interactions within the course.',
+          responsibility: 'As the Lead Developer, I was responsible for creating a course shell that would integrate with Kia\'s LMS in addition to developing interactions within the course.',
           role: 'Lead Developer',
           client: 'Kia Motors',
           period: '2016',
@@ -53,7 +53,7 @@ export class ProjectsService {
           subtitle: 'Kia University',
           // tslint:disable-next-line:max-line-length
           overview: 'The All New Kia Rio course is a web based training course developed to educate Kia sales staff on information and selling points specific to the Kia Rio.',
-          responsibility: 'As the Lead Developer, I was responsible for taking static designs and turning them resuable templated interactions that worked within our previously developed course shell used for Zero to Niro.',
+          responsibility: 'As the Lead Developer, I was responsible for taking static designs and turning them into resuable templated interactions that worked within our previously developed course shell used for Zero to Niro.',
           role: 'Lead Developer',
           client: 'Kia Motors',
           period: '2017',
@@ -73,7 +73,7 @@ export class ProjectsService {
           subtitle: 'Nissan USA',
           // tslint:disable-next-line:max-line-length
           overview: 'Nissan SERV is a native iPad application developed to serve as a training companion during an instructor led course, used by both course facilitators and participants',
-          responsibility: 'As Junior Developer, I was responsible for researching frameworks to develop the application based on technical requirements. Once chosen I developed the application using the Ionic framework alongside a Senior developer.',
+          responsibility: 'As Junior Developer, I was responsible for researching frameworks to develop the application based on technical requirements. I developed the application using the Ionic framework alongside a Senior developer.',
           role: 'Junior Developer',
           client: 'Nissan USA',
           period: '2015-2016',
@@ -93,7 +93,7 @@ export class ProjectsService {
           subtitle: 'Platinum Guild International',
           overview: 'PGI Pop Quiz is a series of bite size quizzes developed to integrate with PGI\'s existing LMS.',
           // tslint:disable-next-line:max-line-length
-          responsibility: 'As the Lead Developer, I was responsible for creating templated application that could create courses on the fly using a course data JSON file.',
+          responsibility: 'As the Lead Developer, I was responsible for creating templated a application that would create quizzes generated from a JSON file.',
           role: 'Lead Developer',
           client: 'Platinum Guild International',
           period: '2016',
