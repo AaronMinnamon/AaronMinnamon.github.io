@@ -4,6 +4,7 @@
 @import 'aaron-material-theme';
 @import 'flaticon';
 @include angular-material-theme($light-theme);
+
   // retrieve variables from theme
  // (all possible variables, use only what you really need)
  $primary: map-get($light-theme, primary);
@@ -36,7 +37,7 @@ html, body, md-sidenav-container, .my-content {
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
 .mat-sidenav{
- background-color: mat-color($primary,darker);
+ background-color: mat-color($primary);
  width: 100px;
  max-width: 100px;
  min-width: 100px !important;
@@ -64,6 +65,18 @@ html, body, md-sidenav-container, .my-content {
    text-align: center;
  }
 }
+ md-toolbar {
+   position: relative;
+   z-index: 4;
+   md-slide-toggle{
+     position: absolute;
+     top: 20px;
+     right: 10px;
+   }
+ }
+ .material-icons.menu-icon{
+   vertical-align: text-top;
+ }
 .social-icons-container{
   position: absolute;
   top: 50%;
@@ -90,14 +103,18 @@ html, body, md-sidenav-container, .my-content {
   position: relative;
   z-index: 3;
   height: 100%;
+  padding: 0 20px;
 }
 .project-card{
   text-align: center;
   h2{
-    font-size: 18px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
   }
   h3{
     font-size: 16px;
+    margin-bottom: 5px;
     color: #747474;
   }
   button{
@@ -238,7 +255,7 @@ html, body, md-sidenav-container, .my-content {
   margin: 3px;
   transition: all 300ms cubic-bezier(.35,0,.25,1);
 }
-.mat-card.project-card:hover{
+.project-card:hover{
   cursor: pointer;
 }
 

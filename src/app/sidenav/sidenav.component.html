@@ -1,5 +1,5 @@
 <md-sidenav-container>
-  <md-sidenav color="accent" mode="side" opened="true">
+  <md-sidenav color="primary" *hideItDevice="['mobile']" mode="side" opened="true">
     <md-slide-toggle color="accent" (change)=sliderChanged($event)></md-slide-toggle>
     <md-nav-list>
        <md-list-item [routerLink]="['/home']"><i mdTooltip="Home" mdTooltipPosition="after" class="material-icons icon-centered">home</i></md-list-item>
@@ -7,6 +7,26 @@
        <a md-list-item [routerLink]="['/contact']"><i mdTooltip="Contact" mdTooltipPosition="after" class="material-icons icon-centered">email</i></a>
     </md-nav-list>
   </md-sidenav>
+  <md-toolbar color="primary" *hideItDevice="['tablet','desktop']">
+    <button md-icon-button [mdMenuTriggerFor]="menu">
+      <i class="material-icons">more_vert</i>
+    </button>
+    <md-slide-toggle color="accent" (change)=sliderChanged($event)></md-slide-toggle>
+        <md-menu #menu="mdMenu">
+          <button md-menu-item [routerLink]="['/home']">
+            <i class="material-icons menu-icon">home</i>
+            <span>Home</span>
+          </button>
+          <button md-menu-item [routerLink]="['/projects']">
+            <i class="material-icons menu-icon">code</i>
+            <span>Projects</span>
+          </button>
+          <button md-menu-item [routerLink]="['/contact']">
+            <i class="material-icons menu-icon">email</i>
+            <span>Contact</span>
+          </button>
+        </md-menu>
+  </md-toolbar>
   <div class="my-content" [@routerAnimations]="prepareRouteTransition(outlet)">
     <router-outlet #outlet="outlet"></router-outlet>
     <app-particles></app-particles>

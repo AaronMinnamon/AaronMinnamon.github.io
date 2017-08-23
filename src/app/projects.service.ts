@@ -25,7 +25,10 @@ export class ProjectsService {
             {class: 'jquery', text: 'jQuery'}
           ],
           devices: ['laptop', 'tablet', 'phone_iphone'],
-          vimeoID: '230078858'
+          vimeoID: '230078858',
+          columns: '3',
+          rows: '1',
+          tileColor: 'white'
         },
         {
           projectID: 'kia-niro',
@@ -45,7 +48,10 @@ export class ProjectsService {
             { class: 'jquery', text: 'jQuery' }
           ],
           devices: ['laptop', 'tablet'],
-          vimeoID: '230079635'
+          vimeoID: '230079635',
+          columns: '1',
+          rows: '2',
+          tileColor: 'white'
         },
         {
           projectID: 'kia-rio',
@@ -65,7 +71,10 @@ export class ProjectsService {
             {class: 'jquery', text: 'jQuery'}
           ],
           devices: ['laptop', 'tablet'],
-          vimeoID: '230079256'
+          vimeoID: '230079256',
+          columns: '1',
+          rows: '1',
+          tileColor: 'white'
         },
         {
           projectID: 'nissan',
@@ -85,7 +94,10 @@ export class ProjectsService {
             {class: 'sass', text: 'Sass'}
           ],
           devices: ['tablet'],
-          vimeoID: '230079397'
+          vimeoID: '230079397',
+          columns: '2',
+          rows: '1',
+          tileColor: 'white'
         },
         {
           projectID: 'pgi',
@@ -105,13 +117,19 @@ export class ProjectsService {
             {class: 'sass', text: 'Sass'}
           ],
           devices: ['laptop', 'tablet', 'phone_iphone'],
-          vimeoID: '230079320'
+          vimeoID: '230079320',
+          columns: '3',
+          rows: '1',
+          tileColor: 'white'
         }
       ];
   }
 
   public getProjects(projectID: string) {
       return this.projects.find(x => x.projectID === projectID); 
+  }
+  public getAllProjects() {
+    return this.projects;
   }
 
 }

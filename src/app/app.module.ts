@@ -3,10 +3,11 @@ import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import 'hammerjs';
 // tslint:disable-next-line:max-line-length
-import { MdChipsModule, MdCardModule, MdGridListModule, MdTooltipModule, MdListModule, MdSidenavModule, MdButtonModule, MdCheckboxModule, MdSlideToggleModule} from '@angular/material';
+import { MdChipsModule, MdToolbarModule, MdMenuModule, MdCardModule, MdGridListModule, MdTooltipModule, MdListModule, MdSidenavModule, MdButtonModule, MdCheckboxModule, MdSlideToggleModule} from '@angular/material';
 import { ParticlesModule } from 'angular-particle';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AgmCoreModule } from '@agm/core';
+import { ResponsiveModule } from 'ng2-responsive'
 
 import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
 import { AppComponent } from './app.component';
@@ -48,13 +49,16 @@ import { GmapsComponent } from './gmaps/gmaps.component';
     MdListModule,
     MdSidenavModule,
     MdButtonModule,
+    MdMenuModule,
     MdCheckboxModule,
     MdSlideToggleModule,
+    MdToolbarModule,
     ParticlesModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBIGPkMqioWR7mSTAUDGHs0G9rDEFTOCbY'
     }),
-    routing
+    routing,
+    ResponsiveModule
   ],
   providers: [ProjectsService],
   bootstrap: [AppComponent]
