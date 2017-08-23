@@ -9,7 +9,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
   animations: [
     trigger('pageAnimation', [
       transition(':enter', [
-        query('.mat-card', style({opacity: 0, transform: 'translateY(100px)'})),
+        query('.mat-card', style({opacity: 0, transform: 'translateY(-100px)'})),
         query('.mat-card .colored-overlay', style({ left: '0' })),
         group([
           query('.mat-card', [
