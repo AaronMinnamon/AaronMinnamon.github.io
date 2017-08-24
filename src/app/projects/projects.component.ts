@@ -2,6 +2,7 @@ import {Component, HostBinding, OnInit} from '@angular/core';
 import {trigger, animate, style, group, animateChild, query, stagger, transition} from '@angular/animations';
 import { ProjectsService } from '../projects.service';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { MdSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-projects',
@@ -41,11 +42,16 @@ export class ProjectsComponent implements OnInit {
   projects: Array<any>;
 
   //Assign
-  constructor(private _projectsService: ProjectsService) {}
+  constructor(private _projectsService: ProjectsService, public snackBar: MdSnackBar) {}
+
+  openSnackBar(message: string, action: string) {
+    this.snackBar.open('Please view on Tablet or Desktop!', action, {
+      duration: 2000,
+    });
+  }
 
   ngOnInit() {
     this.projects = this._projectsService.getAllProjects();
-    console.log(this.projects);
   }
 
 

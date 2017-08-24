@@ -25,7 +25,7 @@ $light-theme: mat-light-theme($light-primary, $light-accent, $light-warn);
 
 
 // Define an alternate dark theme.
-$dark-primary: mat-palette($mat-blue-grey);
+$dark-primary: mat-palette($mat-grey,700);
 $dark-accent:  mat-palette($mat-amber, A200, A100, A400);
 $dark-warn:    mat-palette($mat-deep-orange);
 $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
@@ -41,6 +41,13 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
   h2{
     color: rgba(255, 255, 255, 0.7);
   }
+  .mat-grid-tile {
+    background-color: #424242 !important;
+  }
+  .mat-sidenav{
+    background: #424242;
+  }
+
   .mat-chip.mat-chip-selected.mat-primary {
     font-weight: bold;
     &.php {

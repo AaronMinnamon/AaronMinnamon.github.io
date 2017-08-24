@@ -1,6 +1,18 @@
 <div class="content-container">
-  <md-grid-list cols="4" rowHeight="120px">
+  <md-grid-list *hideItDevice="['mobile']" cols="4" gutterSize="5px" rowHeight="120px">
     <md-grid-tile *ngFor="let project of projects" [routerLink]="[project.projectID]" [colspan]="project.columns" [rowspan]="project.rows" [style.background]="project.tileColor">
+      <div class="project-card">
+        <h2>{{project.title}}</h2>
+        <h3>{{project.subtitle}}</h3>
+        <md-chip-list>
+          <md-chip *ngFor="let language of project.languages" selected="true" class="{{language.class}}">{{language.text}}</md-chip>
+        </md-chip-list>
+      </div>
+    </md-grid-tile>
+  </md-grid-list>
+  <md-grid-list *hideItDevice="['tablet','desktop']" cols="4" gutterSize="5px" rowHeight="120px">
+    <md-grid-tile *ngFor="let project of projects" (click)="openSnackBar()" [colspan]="4" [rowspan]="1"
+      [style.background]="project.tileColor">
       <div class="project-card">
         <h2>{{project.title}}</h2>
         <h3>{{project.subtitle}}</h3>
