@@ -8,13 +8,14 @@
        fxLayoutAlign="center center">
     <div class="container"
         fxLayout
+        fxFlex.xs="100"
         fxFlex.md="80"
         fxFlex="60"
         fxLayout.xs="column"
         fxLayoutGap="0px"
         fxLayoutGap.xs="0"
         fxLayoutAlign="center stretch">
-        <md-card fxFlex.md="60" fxFlex="360px" class="resume-card">
+        <md-card fxFlex.xs="60" fxFlex.md="60" fxFlex="360px" class="resume-card">
           <md-card-content>
             <md-card-title>Contact</md-card-title>
             <md-list>
@@ -57,7 +58,7 @@
             <div class="colored-overlay accent"></div>
           </div>
         </md-card>
-        <md-card class="maps-card" fxFlex.md="40" fxFlex="600px">
+        <md-card class="maps-card" fxFlex.xs="40" fxFlex.md="40" fxFlex="600px">
           <app-gmaps></app-gmaps>
           <div class="colored-overlay accent">
             <div class="colored-overlay primary"></div>
